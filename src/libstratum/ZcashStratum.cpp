@@ -145,11 +145,11 @@ void static ZcashMinerThread(ZcashMiner* miner, int size, int pos)
 
                     // Intialization done, start algo driver.
                     eq.digit0(0);
-                    eq.xfull = eq.bfull = eq.hfull = 0;
+                    eq.bfull = eq.hfull = 0;
                     eq.showbsizes(0);
                     for (u32 r = 1; r < WK; r++) {
                         (r&1) ? eq.digitodd(r, 0) : eq.digiteven(r, 0);
-                        eq.xfull = eq.bfull = eq.hfull = 0;
+                        eq.bfull = eq.hfull = 0;
                         eq.showbsizes(r);
                     }
                     eq.digitK(0);
